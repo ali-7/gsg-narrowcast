@@ -1,0 +1,27 @@
+{
+  "name": "gsg_narrowcast",
+  "version": "1.0.0",
+  "description": "Gaza Sky Geeks Narrowcast Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "istanbul cover test/index.js | tap-spec",
+    "start": "nodemon src/index.js"
+  },
+  "author": "Farah Zaqout",
+  "license": "ISC",
+  "dependencies": {
+    "env2": "^2.2.2",
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0",
+    "mongoose": "^5.1.7"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^13.0.0",
+    "eslint-plugin-import": "^2.13.0",
+    "istanbul": "^0.4.5",
+    "nodemon": "^1.17.5",
+    "tap-spec": "^5.0.0",
+    "tape": "^4.9.1"
+  }
+}
