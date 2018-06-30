@@ -18,6 +18,91 @@ tape('adding a new event to the database', (t) => {
   });
 });
 
+tape('adding a new event to the database', (t) => {
+  const req = {
+    body: {
+      title: 'CODING FOR EVERYONE',
+      hall: 'HALL 1',
+      speaker: 'FACG4',
+      startDate: '2018-08-18T16:00:00Z',
+      endDate: '2018-08-18T16:00:00Z',
+      description: 'DESCRIPTION STRING',
+    },
+  };
+  createEvent(req, (err, res) => {
+    t.equal(res.title, 'CODING FOR EVERYONE', 'database should have a coding for everyone event');
+    return t.end();
+  });
+});
+
+tape('adding a new event to the database', (t) => {
+  const req = {
+    body: {
+      title: 'CODING FOR EVERYONE',
+      hall: 'HALL 1',
+      speaker: 'FACG4',
+      startDate: '2018-08-18T16:00:00Z',
+      endDate: '2018-08-18T16:00:00Z',
+      description: 'DESCRIPTION STRING',
+    },
+  };
+  createEvent(req, (err, res) => {
+    t.equal(res.title, 'CODING FOR EVERYONE', 'database should have a coding for everyone event');
+    return t.end();
+  });
+});
+
+tape('adding a new event to the database', (t) => {
+  const req = {
+    body: {
+      title: 'CODING FOR EVERYONE',
+      hall: 'HALL 1',
+      speaker: 'FACG4',
+      startDate: '2018-08-18T16:00:00Z',
+      endDate: '2018-08-18T16:00:00Z',
+      description: 'DESCRIPTION STRING',
+    },
+  };
+  createEvent(req, (err, res) => {
+    t.equal(res.title, 'CODING FOR EVERYONE', 'database should have a coding for everyone event');
+    return t.end();
+  });
+});
+
+tape('adding a new event to the database', (t) => {
+  const req = {
+    body: {
+      title: 'CODING FOR EVERYONE',
+      hall: 'HALL 1',
+      speaker: 'FACG4',
+      startDate: '2018-08-18T16:00:00Z',
+      endDate: '2018-08-18T16:00:00Z',
+      description: 'DESCRIPTION STRING',
+    },
+  };
+  createEvent(req, (err, res) => {
+    t.equal(res.title, 'CODING FOR EVERYONE', 'database should have a coding for everyone event');
+    return t.end();
+  });
+});
+
+tape('adding a new event to the database', (t) => {
+  const req = {
+    body: {
+      title: 'CODING FOR EVERYONE',
+      hall: 'HALL 1',
+      speaker: 'FACG4',
+      startDate: '2018-08-18T16:00:00Z',
+      endDate: '2018-08-18T16:00:00Z',
+      description: 'DESCRIPTION STRING',
+    },
+  };
+  createEvent(req, (err, res) => {
+    t.equal(res.title, 'CODING FOR EVERYONE', 'database should have a coding for everyone event');
+    return t.end();
+  });
+});
+
 tape('failing the query to test if it handles the error properly', (t) => {
   const req = {
     body: {

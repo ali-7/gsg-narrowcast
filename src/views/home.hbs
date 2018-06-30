@@ -1,0 +1,38 @@
+<body>
+  <main>
+
+    <!-- start of the detailed view section -->
+    <section class="detailed-view">
+      <div class="details-container">
+        <div class="top">
+        </div>
+        <div class="mid">
+        </div>
+        <div class="bot">
+        </div>
+      </div>
+    </section>
+
+ <!-- start of the upcoming events section -->
+    <section class="upcoming-events">
+      <div class="static-upcoming">
+        <h1>Upcoming Events</h1>
+      </div>
+      {{#each result}}
+      <div class="each-event">
+        <div class="date-container">
+          <div class="date-div">
+            <span class="inline-date nth-month">Jun</span>
+            <span class="inline-date nth-day">17</span>
+          </div>
+        </div>
+        <div class="info-div">
+          <div class="info-container">
+            <h3 class="nth-upcoming-title">{{this.title}}</h3><h3 class="nth-upcoming-detail">{{this.hall}}</h3><h3 class="nth-upcoming-detail">{{this.speaker}}</h3>
+          </div>
+        </div>
+      </div>
+      {{/each}}
+    </section>
+  </main>
+</body>

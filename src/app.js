@@ -1,7 +1,7 @@
 const express = require('express');
 const exphbs = require('express-handlebars');
 const path = require('path');
-
+const controllers = require('./controllers');
 
 const app = express();
 
@@ -18,5 +18,6 @@ app.engine('hbs',
 app.use(express.static(path.join(__dirname, '..', 'public')));
 app.set('port', process.env.PORT || 3000);
 
+app.use(controllers);
 
 module.exports = app;
