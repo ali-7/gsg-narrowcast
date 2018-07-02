@@ -14,7 +14,7 @@ tape('delete an existing event', (t) => {
       deleteEvent(req, (error, result) => {
         if (err) t.end(error);
         findEvent((findError, findRes) => {
-          t.equal(findRes.length, 5, 'database should have five events instead of five')
+          t.equal(findRes.length, 6, 'database should have five events instead of five')
           t.end();
         })
       });

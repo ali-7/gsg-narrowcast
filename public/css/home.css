@@ -8,15 +8,21 @@ main {
 }
 
 .detailed-view {
+  background: url("https://i.imgur.com/AaftAG9.jpg");
+  background-size: cover;
   height: 100%;
-  width: 75%;
+  width: 65%;
 }
 
 .upcoming-events {
   display: flex;
   flex-direction: column;
   height: 100%;
-  width: 25%;
+  width: 35%;
+}
+
+.hidden {
+  display: none;
 }
 
 /* page skeleton ends here */
@@ -30,26 +36,29 @@ main {
   text-align: center;
   border-bottom: 1px #f4f4f4 solid;
   font-family: helvetica;
-  height: 8%;
-  margin: 0;
+  font-size: 27px;
+  height: 11%;
+  margin-top: -3%;
 }
 
 .each-event {
   border-bottom: 1px #f4f4f4 solid;
   display: flex;
   flex-direction: row;
-  height: 15%;
+  height: 18%;
 }
 
 .date-container {
+  margin-left: 6%;
   width: 30%;
   height: 100%;
 }
 
 .date-div {
-  margin-top: 20%;
-  margin-left: 18%;
-  height: 60%;
+  margin-top: 7%;
+  margin-bottom: auto;
+  margin-left: 10%;
+  height: 65%;
   width: 68%;
   display: flex;
   flex-direction: column;
@@ -65,8 +74,8 @@ main {
   font-size: 22px;
   font-weight: 900;
   font-family: helvetica;
-  padding-top: 7px;
-  padding-bottom: 7px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   background: -webkit-linear-gradient(left, #46b0c1, #308ab0);
   background: -o-linear-gradient(left, #46b0c1, #308ab0);
   background: linear-gradient(to right, #46b0c1, #308ab0);
@@ -77,8 +86,8 @@ main {
 .month {
   text-align: center;
   color: white;
-  padding-bottom: 7px;
-  padding-top: 7px;
+  padding-bottom: 15px;
+  padding-top: 15px;
   font-weight: 900;
   font-size: 22px;
   font-family: helvetica;
@@ -92,8 +101,8 @@ main {
 .nth-month {
   text-align: center;
   color: #308ab0;
-  padding-bottom: 7px;
-  padding-top: 7px;
+  padding-bottom: 15px;
+  padding-top: 15px;
   font-weight: 900;
   font-size: 22px;
   font-family: helvetica;
@@ -108,8 +117,8 @@ main {
   font-size: 22px;
   font-weight: 900;
   font-family: helvetica;
-  padding-top: 7px;
-  padding-bottom: 7px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   background: #f2f2f2;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
@@ -128,7 +137,7 @@ main {
 .info-container {
 }
 
-h3 {
+h2 {
   margin: 0;
 }
 
@@ -136,15 +145,23 @@ h3 {
   color: #ef4e0d;
 }
 
-.upcoming-detail {
-  color: #46b0c1;
-}
-
 .nth-upcoming-title {
   color: #308ab0;
 }
 
-.nth-upcoming-detail {
+.upcoming-first {
+  color: #46b0c1;
+}
+
+.nth-upcoming-first {
+  color: gray;
+}
+
+.upcoming-second {
+  color: #46b0c1;
+}
+
+.nth-upcoming-second {
   color: gray;
 }
 
@@ -153,6 +170,7 @@ h3 {
 /* ========================================================================= */
 
 /* inside the detailed view section starts here */
+/* main structure */
 .details-container {
   height: 100%;
   display: flex;
@@ -160,16 +178,230 @@ h3 {
 }
 
 .top {
+  display: flex;
   height: 20%;
-  background-color: gray;
 }
 
 .mid {
   height: 60%;
-  background-color: black;
 }
 
 .bot {
+  display: flex;
+  justify-content: space-around;
   height: 20%;
-  background-color: gray;
+}
+
+/* inside the top div */
+
+.cd-timer {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.minutes {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  margin-left: 12%;
+  width: 23%;
+  height: 50%;
+  background-color: white;
+  opacity: 1;
+}
+.seconds {
+  border-radius: 10px;
+  width: 23%;
+  height: 50%;
+  margin-left: 3%;
+  background-color: white;
+  opacity: 1;
+}
+
+
+.min-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 20%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding-top: 10%;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: helvetica;
+  color: #308ab0;
+}
+
+.min-numbers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  font-size: 50px;
+  font-family: helvetica;
+  color: #ef4e0d;
+  font-weight: bolder;
+}
+
+.sec-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 20%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding-top: 10%;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: helvetica;
+  color: #308ab0;
+}
+
+.sec-numbers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+  margin-top: -5%;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  font-size: 50px;
+  font-family: helvetica;
+  color: #ef4e0d;
+  font-weight: bolder;
+}
+
+.geeks-logo {
+  display: flex;
+  height: 100%;
+  width: 60%;
+}
+
+.logo-image {
+  margin: auto 23% auto auto;
+}
+
+/* inside the mid div */
+.mid-text {
+  width: 100%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 18%;
+}
+
+.lorem-title {
+  margin-top: 6%;
+  margin-left: 13%;
+  width: 80%;
+  background-color;
+  font-size: 40px;
+  padding-bottom: 1%;
+  font-style: underline;
+  font-family: helvetica;
+  font-weight: bolder;
+  color: white;
+}
+
+.lorem-description {
+  margin-top: 0%;
+  margin-left: 13%;
+  width: 74%;
+  height: 30%;
+  background-color;
+  font-size: 27px;
+  font-family: helvetica;
+  color: white;
+}
+
+/* BOTTOM div starts here */
+
+
+.time-div {
+  display: flex;
+  margin-top: 2%;
+  width: 50%;
+  height: 100%;
+}
+
+.time-text-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 50%;
+  height: 40%;
+  margin-left: 6%;
+}
+
+.time-image-div {
+  height: 40%;
+  margin-left: 2%;
+}
+
+.time-image {
+  height: 100%;
+
+}
+
+
+
+.duration-text {
+  height: 20%;
+  font-size: 20px;
+  font-family: helvetica;
+  color: white;
+}
+
+.duration-time {
+  height: 60%;
+  font-size: 30px;
+  color: white;
+  font-family: helvetica;
+  margin-top: 8%;
+}
+
+.speaker-div {
+  display: flex;
+  width: 50%;
+  height: 100%;
+  color: white;
+}
+
+.speaker-image-div {
+    margin-top: 6%;
+  margin-left: 26%;
+  height: 35%;
+  width: 12%;
+}
+
+.speaker-image {
+  width: 100%;
+  height: 100%;
+}
+
+.speaker-text-div {
+  margin-top: 5%;
+  display: flex;
+  flex-direction: column;
+  margin-left: 3%;
+}
+
+.speaker-text {
+  font-size: 20px;
+  font-family: helvetica;
+}
+
+.speaker-name {
+  font-size: 30px;
+  font-family: helvetica;
+  margin-top: 8%;
 }
