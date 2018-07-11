@@ -65,8 +65,7 @@ for (let i = 0; i < startDate.length; i++) {
   const eventStart = new Date(startDate[i].textContent);
   const remainingTime = (eventStart.getTime() / 1000) - (Date.now() / 1000);
   const remainingMinutes = Math.floor((remainingTime % 3600) / 60);
-
-  if (remainingMinutes < 30) {
+  if ((remainingTime) < 1800) {
     days[i].classList.remove('nth-day');
     months[i].classList.remove('nth-month');
     upcomingTitle[i].classList.remove('nth-upcoming-title');
@@ -78,10 +77,10 @@ for (let i = 0; i < startDate.length; i++) {
 // populate the speaker field in the detailed view.
 speakerName[0].textContent = speaker[0].textContent;
 
-// countdown timer
+// auto delete events in the past
 setInterval(() => {
-  for (let i = 0; i < startDate.length; i++) {
-    const eventStart = new Date(startDate[i].textContent).getTime() - Date.now();
+  for (let i = 0; i < endDate.length; i++) {
+    const eventStart = new Date(endDate[i].textContent).getTime() - Date.now();
     if (eventStart < 2000) {
       fetch(`/delete-event/${eventId[i].textContent}`, {
         method: 'GET',
@@ -94,6 +93,7 @@ setInterval(() => {
   }
 }, 1000);
 
+// countdown timer
 const myCountdown = startDate[0].textContent;
 const newDate = new Date(myCountdown).toISOString();
 let remainingTime = (new Date(newDate).getTime() / 1000) - (Date.now() / 1000);

@@ -76,8 +76,8 @@ main {
   font-family: helvetica;
   padding-top: 15px;
   padding-bottom: 15px;
-  background: -webkit-linear-gradient(left, #46b0c1, #308ab0);
-  background: -o-linear-gradient(left, #46b0c1, #308ab0);
+  /* background: -webkit-linear-gradient(left, #46b0c1, #308ab0);
+  background: -o-linear-gradient(left, #46b0c1, #308ab0); */
   background: linear-gradient(to right, #46b0c1, #308ab0);
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
@@ -91,8 +91,8 @@ main {
   font-weight: 900;
   font-size: 22px;
   font-family: helvetica;
-   background: -webkit-linear-gradient(left, #ef4e0d, #f27b00);
-   background: -o-linear-gradient(left, #ef4e0d, #f27b00);
+   /* background: -webkit-linear-gradient(left, #ef4e0d, #f27b00);
+   background: -o-linear-gradient(left, #ef4e0d, #f27b00); */
    background: linear-gradient(to right, #ef4e0d, #f27b00);
    border-top-left-radius: 10px;
   border-top-right-radius: 10px;
