@@ -1,0 +1,407 @@
+/* page skeleton starts here */
+
+main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.detailed-view {
+  background: url("https://i.imgur.com/AaftAG9.jpg");
+  background-size: cover;
+  height: 100%;
+  width: 65%;
+}
+
+.upcoming-events {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 35%;
+}
+
+.hidden {
+  display: none;
+}
+
+/* page skeleton ends here */
+
+/* ======================================================================================== */
+
+/* inside the list of upcoming events section starts here */
+
+.static-upcoming {
+  color: #308ab0;
+  text-align: center;
+  border-bottom: 1px #f4f4f4 solid;
+  font-family: helvetica;
+  font-size: 27px;
+  height: 11%;
+  margin-top: -3%;
+}
+
+.each-event {
+  border-bottom: 1px #f4f4f4 solid;
+  display: flex;
+  flex-direction: row;
+  height: 18%;
+}
+
+.date-container {
+  margin-left: 6%;
+  width: 30%;
+  height: 100%;
+}
+
+.date-div {
+  margin-top: 7%;
+  margin-bottom: auto;
+  margin-left: 10%;
+  height: 65%;
+  width: 68%;
+  display: flex;
+  flex-direction: column;
+}
+
+.inline-date {
+  height: 50%;
+}
+
+.day {
+  text-align: center;
+  color: white;
+  font-size: 22px;
+  font-weight: 900;
+  font-family: helvetica;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  /* background: -webkit-linear-gradient(left, #46b0c1, #308ab0);
+  background: -o-linear-gradient(left, #46b0c1, #308ab0); */
+  background: linear-gradient(to right, #46b0c1, #308ab0);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.month {
+  text-align: center;
+  color: white;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  font-weight: 900;
+  font-size: 22px;
+  font-family: helvetica;
+   /* background: -webkit-linear-gradient(left, #ef4e0d, #f27b00);
+   background: -o-linear-gradient(left, #ef4e0d, #f27b00); */
+   background: linear-gradient(to right, #ef4e0d, #f27b00);
+   border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.nth-month {
+  text-align: center;
+  color: #308ab0;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  font-weight: 900;
+  font-size: 22px;
+  font-family: helvetica;
+  background: #e8e8e8;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.nth-day {
+  text-align: center;
+  color: #ef4e0d;
+  font-size: 22px;
+  font-weight: 900;
+  font-family: helvetica;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background: #f2f2f2;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.info-div {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  font-size: 15px;
+  font-family: helvetica;
+  text-align: left;
+}
+
+.info-container {
+}
+
+h2 {
+  margin: 0;
+}
+
+.upcoming-title {
+  color: #ef4e0d;
+}
+
+.nth-upcoming-title {
+  color: #308ab0;
+}
+
+.upcoming-first {
+  color: #46b0c1;
+}
+
+.nth-upcoming-first {
+  color: gray;
+}
+
+.upcoming-second {
+  color: #46b0c1;
+}
+
+.nth-upcoming-second {
+  color: gray;
+}
+
+/* inside the list of upcoming events section ends here */
+
+/* ========================================================================= */
+
+/* inside the detailed view section starts here */
+/* main structure */
+.details-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.top {
+  display: flex;
+  height: 20%;
+}
+
+.mid {
+  height: 60%;
+}
+
+.bot {
+  display: flex;
+  justify-content: space-around;
+  height: 20%;
+}
+
+/* inside the top div */
+
+.cd-timer {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.minutes {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  margin-left: 12%;
+  width: 23%;
+  height: 50%;
+  background-color: white;
+  opacity: 1;
+}
+.seconds {
+  border-radius: 10px;
+  width: 23%;
+  height: 50%;
+  margin-left: 3%;
+  background-color: white;
+  opacity: 1;
+}
+
+
+.min-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 20%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding-top: 10%;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: helvetica;
+  color: #308ab0;
+}
+
+.min-numbers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  font-size: 50px;
+  font-family: helvetica;
+  color: #ef4e0d;
+  font-weight: bolder;
+}
+
+.sec-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 20%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding-top: 10%;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: helvetica;
+  color: #308ab0;
+}
+
+.sec-numbers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+  margin-top: -5%;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  font-size: 50px;
+  font-family: helvetica;
+  color: #ef4e0d;
+  font-weight: bolder;
+}
+
+.geeks-logo {
+  display: flex;
+  height: 100%;
+  width: 60%;
+}
+
+.logo-image {
+  margin: auto 23% auto auto;
+}
+
+/* inside the mid div */
+.mid-text {
+  width: 100%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 18%;
+}
+
+.lorem-title {
+  margin-top: 6%;
+  margin-left: 13%;
+  width: 80%;
+  background-color;
+  font-size: 40px;
+  padding-bottom: 1%;
+  font-style: underline;
+  font-family: helvetica;
+  font-weight: bolder;
+  color: white;
+}
+
+.lorem-description {
+  margin-top: 0%;
+  margin-left: 13%;
+  width: 74%;
+  height: 30%;
+  background-color;
+  font-size: 27px;
+  font-family: helvetica;
+  color: white;
+}
+
+/* BOTTOM div starts here */
+
+
+.time-div {
+  display: flex;
+  margin-top: 2%;
+  width: 50%;
+  height: 100%;
+}
+
+.time-text-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 50%;
+  height: 40%;
+  margin-left: 6%;
+}
+
+.time-image-div {
+  height: 40%;
+  margin-left: 2%;
+}
+
+.time-image {
+  height: 100%;
+
+}
+
+
+
+.duration-text {
+  height: 20%;
+  font-size: 20px;
+  font-family: helvetica;
+  color: white;
+}
+
+.duration-time {
+  height: 60%;
+  font-size: 30px;
+  color: white;
+  font-family: helvetica;
+  margin-top: 8%;
+}
+
+.speaker-div {
+  display: flex;
+  width: 50%;
+  height: 100%;
+  color: white;
+}
+
+.speaker-image-div {
+    margin-top: 6%;
+  margin-left: 26%;
+  height: 35%;
+  width: 12%;
+}
+
+.speaker-image {
+  width: 100%;
+  height: 100%;
+}
+
+.speaker-text-div {
+  margin-top: 5%;
+  display: flex;
+  flex-direction: column;
+  margin-left: 3%;
+}
+
+.speaker-text {
+  font-size: 20px;
+  font-family: helvetica;
+}
+
+.speaker-name {
+  font-size: 30px;
+  font-family: helvetica;
+  margin-top: 8%;
+}
