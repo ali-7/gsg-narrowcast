@@ -2,7 +2,6 @@ const tape = require('tape');
 const updateEvent = require('../../../src/models/queries/update_event');
 const findEvent = require('../../../src/models/queries/find_event');
 
-
 tape('updating an existing event', (t) => {
   findEvent((err, res) => {
     if (err) t.end(err);
@@ -18,7 +17,7 @@ tape('updating an existing event', (t) => {
           startDate: '2018-08-18T16:00:00Z',
           endDate: '2018-08-18T16:00:00Z',
           description: 'NEW DESCRIPTION TEXT',
-        }
+        },
       };
       updateEvent(req, (error, result) => {
         if (err) t.end(error);
@@ -44,13 +43,14 @@ tape('updating an existing event with wrong date formula', (t) => {
           startDate: '2018-08-18T16:00:00Z',
           endDate: '2018-08-18T16:00:00Z',
           description: 'NEW DESCRIPTION TEXT',
-        }
+        },
       };
       updateEvent(req, (error, result) => {
         if (err) t.end(err);
         t.equal(result.title, 'GEEXELERATOR', '2nd event is successfully updated');
         t.end();
-      })
+        let testPass = 1;
+      });
     }
   });
 });

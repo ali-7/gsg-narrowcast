@@ -10,16 +10,19 @@ tape('dropping the schemas at the start of the test', (t) => {
     Events.remove({}),
     Programs.remove({}),
   ]).then(() => {
-    Users.find({}).then((res) => {
-      t.equal(res.length, 0, 'Users schema has been dropped');
-    });
-    Events.find({}).then((res) => {
-      t.equal(res.length, 0, 'Events schema has been dropped');
-    });
-    Programs.find({}).then((res) => {
-      t.equal(res.length, 0, 'Programs schema has been dropped');
-    });
-    t.end();
+    const wait = async () => {
+      await Users.find({}).then((res) => {
+        t.equal(res.length, 0, 'Users schema has been dropped');
+      });
+      await Events.find({}).then((res) => {
+        t.equal(res.length, 0, 'Events schema has been dropped');
+      });
+      await Programs.find({}).then((res) => {
+        t.equal(res.length, 0, 'Programs schema has been dropped');
+      });
+      t.end();
+    };
+    wait();
   })
     .catch(err => t.end(err));
 });
